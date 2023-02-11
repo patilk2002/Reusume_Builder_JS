@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form>
+            <h4>Registration Form</h4>
+            <!-- Input from User -->
+            <input type="text" placeholder='Name' id="name" name="fn"><br>
+            <input type="email" placeholder='Email' id="email"><br>
+            <input id='btn' type="submit" placeholder='Register' onclick="RESUME(this.form)">
+        </form>
+        <!-- Output Form Details -->
+        <p>Name: <span id="display_name"></span></p>
+        <p>Email: <span id="display_email"></span></p>
+    </center>
+    <script>
+    const register = function (event) {
+    // Receive user input
+    document.write("<div style='border:2px solid black'><div style='margin-left:20px'><div style='margin-right:20px'><div style='Color:#2196f3;text-align:center;font-size:25px;margin-top:5px;'>RESUME</div><hr><div style='line-height:25px'><b>$data .= $_POST['fn'];$data .= $_POST['mn'];$data .= $_POST['ln'];<br>Address : </b>  $data .= $_POST['addr'];<br><b>E-mail Id: </b>$data .= $_POST['email'];<br><b>Contact no : </b>$data .= $_POST['cn'];<br></div><hr><div style='background-color:#f3f2ee'>Career Objective :</div><div style='line-height:25px'><p>Seeking to work as a key player in a challenging and creative environment in an esteemed organization where I can utilize my abilities and have the opportunity for professional growth, which in turn leads to the growth of the organization.</p></div><div style='background-color:#f3f2ee'> personal Information :</div><br>Name: $data .= $_POST['fn']; $data .= $_POST['mn'];$data .= $_POST['ln'];<br><br>Date Of Birth : $data .= $_POST['dob'];<br><br>Nationality: $data .= $_POST['nat'];<br><br>Maritial status : $data .= $_POST['ms'];<br><br>Gender : $data .= $_POST['gen'];<br><br>Languages Known : $data .= $_POST['lang'];//if(!empty($_POST['lang']))//{<br><br>Hobbies & Interest : $data .= $_POST['hobbi'];<br><br><div style='background-color:#f3f2ee'> Educational Qualification :</div><div style='line-height:25px'><ul>if(!empty($_POST['edua1'])){<li>Complated $data .= $_POST['edua1'];from $data .= $_POST['edua2'];board with $data .= $_POST['edua3'];% .</li>}if(!empty($_POST['edub1'])){<li>Complated $data .= $_POST['edub1'];from $data .= $_POST['edub2'];board with $data .= $_POST['edub3'];% .</li>}if(!empty($_POST['educ1'])){<li>Complated $data .= $_POST['educ1'];with $data .= $_POST['educ2'];% .</li>}if(!empty($_POST['edud1'])){<li>Complated $data .= $_POST['edud1'];with $data .= $_POST['edud2'];% .</li>}</ul><br></div><div style='background-color:#f3f2ee'> Work Experience :</div><div style='line-height:25px'><ul>if(!empty($_POST['wea1'])){<li>Worked in $data .= $_POST['wea1']; as $data .= $_POST['wea2']; for $data .= $_POST['wea3'];  years.</li>}if(!empty($_POST['web1'])){<li>Worked in $data .= $_POST['web1']; as $data .= $_POST['web2']; for $data .= $_POST['web3'];  years.</li>}if(!empty($_POST['wec1'])){<li>Worked in $data .= $_POST['wec1']; as $data .= $_POST['wec2']; for $data .= $_POST['wec3'];  years.</li>}if(!empty($_POST['wed1'])){<li>Worked in $data .= $_POST['wed1']; as $data .= $_POST['wed2']; for $data .= $_POST['wed3'];  years.</li>}</ul><br></div><div style='background-color:#f3f2ee'>Declaration :</div><p>I hereby declare that the information furnished above is true to the best of my knowledge.</p><br>Date :$data .= date('d/m/y');<br><br>Place :<br><br><div style='text-align:right'>$data .= $_POST['fn']; $data .= $_POST['mn']; $data .= $_POST['ln'];</div><br><br></div></div></div>date_default_timezone_set('Asia/Kolkata'); $date = date('m.d.Y.G.i'); $mpdf=new \Mpdf\Mpdf(['mode' => 'utf-8','format' => 'A4','margin_left' => 10,'margin_right' => 10,'margin_top' => 6,'margin_bottom' => 6,'margin_header' => 0,'margin_footer' => 0]);$mpdf-> WriteHTML($data);");
+    document.write(document.querySelector("fn").value);
+    console.log(event.fn.value);
+    // Output on page
+    // display_name.innerHTML = r_name;
+    // display_email.innerHTML = r_email;
+    event.preventDefault();
+    };
+
+    function RESUME(form){
+    document.write("<div style='border:2px solid black'><div style='margin-left:20px'><div style='margin-right:20px'><div style='Color:#2196f3;text-align:center;font-size:25px;margin-top:5px;'>RESUME</div><hr><div style='line-height:25px'><b><br>Address : </b><br><b>E-mail Id: </b><br><b>Contact no : </b><br></div><hr><div style='background-color:#f3f2ee'>Career Objective :</div><div style='line-height:25px'><p>Seeking to work as a key player in a challenging and creative environment in an esteemed organization where I can utilize my abilities and have the opportunity for professional growth, which in turn leads to the growth of the organization.</p></div><div style='background-color:#f3f2ee'> personal Information :</div><br>Name: "+form.fn.value+" "+form.mn.value+" "+form.ln.value+"<br><br>Date Of Birth : <br><br>Nationality: <br><br>Maritial status : <br><br>Gender : <br><br>Languages Known ://if(!empty($_POST['lang']))//{<br><br>Hobbies & Interest : <br><br><div style='background-color:#f3f2ee'> Educational Qualification :</div><div style='line-height:25px'><ul>if(!empty($_POST['edua1'])){<li>Complated $data .= $_POST['edua1'];from $data .= $_POST['edua2'];board with $data .= $_POST['edua3'];% .</li>}if(!empty($_POST['edub1'])){<li>Complated $data .= $_POST['edub1'];from $data .= $_POST['edub2'];board with $data .= $_POST['edub3'];% .</li>}if(!empty($_POST['educ1'])){<li>Complated $data .= $_POST['educ1'];with $data .= $_POST['educ2'];% .</li>}if(!empty($_POST['edud1'])){<li>Complated $data .= $_POST['edud1'];with $data .= $_POST['edud2'];% .</li>}</ul><br></div><div style='background-color:#f3f2ee'> Work Experience :</div><div style='line-height:25px'><ul>if(!empty($_POST['wea1'])){<li>Worked in $data .= $_POST['wea1']; as $data .= $_POST['wea2']; for $data .= $_POST['wea3'];  years.</li>}if(!empty($_POST['web1'])){<li>Worked in $data .= $_POST['web1']; as $data .= $_POST['web2']; for $data .= $_POST['web3'];  years.</li>}if(!empty($_POST['wec1'])){<li>Worked in $data .= $_POST['wec1']; as $data .= $_POST['wec2']; for $data .= $_POST['wec3'];  years.</li>}if(!empty($_POST['wed1'])){<li>Worked in $data .= $_POST['wed1']; as $data .= $_POST['wed2']; for $data .= $_POST['wed3'];  years.</li>}</ul><br></div><div style='background-color:#f3f2ee'>Declaration :</div><p>I hereby declare that the information furnished above is true to the best of my knowledge.</p><br>Date :$data .= date('d/m/y');<br><br>Place :<br><br><div style='text-align:right'>$data .= $_POST['fn']; $data .= $_POST['mn']; $data .= $_POST['ln'];</div><br><br></div></div></div>date_default_timezone_set('Asia/Kolkata'); $date = date('m.d.Y.G.i'); $mpdf=new \Mpdf\Mpdf(['mode' => 'utf-8','format' => 'A4','margin_left' => 10,'margin_right' => 10,'margin_top' => 6,'margin_bottom' => 6,'margin_header' => 0,'margin_footer' => 0]);$mpdf-> WriteHTML($data);");
+    // document.write(form.fn.value);
+    }
+
+
+
+
+    </script>
+</body>
+</html>
